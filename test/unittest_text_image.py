@@ -1,7 +1,7 @@
 import unittest
 
-from util.text_image import TextParameters
-from util.text_image import generate_image_from_text, pixelize_image
+from util.text_to_image import TextParameters
+from util.text_to_image import generate_image_from_text
 #from params import TextImageParameters, PixelImageParameters
 
 
@@ -10,9 +10,6 @@ class GenerateTextImages(unittest.TestCase):
     image.py 에 대한 유닛 테스트 케이스
     '''
     def test_generate_text_images(self):
-        '''
-        blah
-        '''
         # parameters
         text = '동해물과 백두산이'
         font = 'data/fonts/NanumBarunGothic.ttf'
