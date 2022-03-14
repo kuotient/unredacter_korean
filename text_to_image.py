@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Tuple
 from PIL import Image, ImageDraw, ImageFont
 # 1. property 작성 
@@ -15,13 +15,22 @@ class TextParameters:
     offsets: Tuple[int, int] = (0, 0)
     # block_size: int = 2
 
+# text 변수는 계속 바뀌어야 한다. 따라서 getter setter 필요.
 @dataclass
 class TextImage:
     text: str
+    _text: str = field(init=False)
     parameters: TextParameters
     image: Image
     size: Tuple[int, int]
    
+    @property
+    def text(self) -> str:
+        return self._text
+    
+    @text.setter
+    def text(self, text: str) -> None:
+        self._text = text
    
 def generate_image_from_text(text: str, params: TextParameters) -> TextImage:
     '''
