@@ -12,7 +12,7 @@ class TextParameters:
     font_size: int
     font_color: Tuple[int, int, int] = (0, 0, 0)
     bg_color: Tuple[int, int, int] = (255, 255, 255)
-    offsets: Tuple[int, int] = (0, 0)
+    text_position: Tuple[int, int] = (0, 0)
     # block_size: int = 2
 
 # text 변수는 계속 바뀌어야 한다. 따라서 getter setter 필요.

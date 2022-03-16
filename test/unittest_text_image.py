@@ -1,7 +1,7 @@
 import unittest
 
-from util.text_to_image import TextParameters
-from util.text_to_image import generate_image_from_text
+from text_to_image import TextParameters
+from text_to_image import generate_image_from_text
 #from params import TextImageParameters, PixelImageParameters
 
 

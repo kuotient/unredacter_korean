@@ -27,9 +27,9 @@ def cosine_similarity(image1, image2):
     Returns a value between 0 and 1.
     '''
     # Maybe we can use...
-    # 1. The scipy.spatial.distance.cosine function = Result: Take 0.96s
+    # 1. The scipy.spatial.distance.cosine function
     #    Cosine Similarity = -(Cosine Distance -1)
-    # 2. The numpy.linalg.norm function and the numpy.dot function
+    # 2. The numpy.linalg.norm function and numpy.dot function
     # Numpy is faster than scipy
     # image1 = np.array(image1).flatten()/255
     # image2 = np.array(image2).flatten()/255
@@ -43,7 +43,7 @@ def ssim(image1, image2):
     Returns a value between 0 and 1.
     '''
 
-    return ssim(image1, image2)
+    pass
 
 def mean_squared_error(image1, image2):
     '''
@@ -52,6 +52,8 @@ def mean_squared_error(image1, image2):
 
     return np.square(np.subtract(image1, image2)).mean()
 
+
+#Simple Test codes
 start_time = time.time()
 result = cosine_similarity(IMAGE_ARY1, IMAGE_ARY2)
 end_time = time.time()

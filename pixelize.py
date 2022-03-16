@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from util.text_to_image import TextImage, TextParameters
+from text_to_image import TextImage
 
 @dataclass    
 class PixelizeParameters():
